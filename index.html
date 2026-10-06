@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O’Garba by cheffe Assana — Maquette</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: { colors: { ink:'#0f172a', teal:'#0d9488', gold:'#c9a227', cream:'#f8fafc' }, fontFamily: { sans:['Inter','system-ui','sans-serif'] } } } }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .lang-en { display: none; }
+  body.en .lang-fr { display: none; }
+  body.en .lang-en { display: inline; }
+  body.en .lang-en-block { display: block; }
+  .lang-en-block { display: none; }
+  body.en .lang-fr-block { display: none; }
+</style>
+</head>
+<body class="font-sans bg-cream text-ink">
+<div class="bg-amber-50 text-amber-950 text-center text-xs sm:text-sm py-2 px-4 border-b border-amber-200">Maquette offerte par Al-Falah Marketing — rien n’est en ligne sous votre nom. <span class="lang-en">Complimentary mockup by Al-Falah Marketing — nothing is live under your name.</span></div>
+<header class="sticky top-0 z-40 bg-ink/95 backdrop-blur text-white">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <a href="#top" class="font-extrabold tracking-tight text-lg">O’Garba <span class="text-gold font-medium text-sm">by cheffe Assana</span></a>
+    <nav class="hidden md:flex gap-5 text-sm text-slate-200">
+      <a href="#menu" class="hover:text-white"><span class="lang-fr">Menu</span><span class="lang-en">Menu</span></a>
+      <a href="#galerie" class="hover:text-white"><span class="lang-fr">Ambiance</span><span class="lang-en">Gallery</span></a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="langBtn" class="text-xs border border-white/30 rounded-full px-3 py-1">EN</button>
+      <a href="https://wa.me/224629110506" class="bg-teal text-white text-sm font-semibold rounded-full px-4 py-2">WhatsApp</a>
+    </div>
+  </div>
+</header>
+<section id="top" class="relative min-h-[78vh] flex items-end text-white">
+  <img src="assets/hero.jpg" alt="Plat ouest-africain" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+  <div class="relative max-w-6xl mx-auto px-4 pb-16 pt-28">
+    <p class="text-gold text-sm tracking-widest uppercase mb-3">Taouyah Transit · Conakry</p>
+    <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight max-w-3xl"><span class="lang-fr">Cuisine africaine & européenne, service traiteur.</span><span class="lang-en">African & European kitchen, full catering.</span></h1>
+    <p class="mt-4 max-w-xl text-slate-200 text-lg"><span class="lang-fr">Anniversaires, mariages, baptêmes, buffets et brunchs — préparés par la cheffe Assana.</span><span class="lang-en">Birthdays, weddings, baptisms, buffets and brunch — prepared by Chef Assana.</span></p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="https://wa.me/224629110506?text=Bonjour%20O%27Garba%2C%20je%20souhaite%20r%C3%A9server." class="bg-teal px-5 py-3 rounded-xl font-semibold"><span class="lang-fr">Réserver sur WhatsApp</span><span class="lang-en">Book on WhatsApp</span></a>
+      <a href="tel:+224629110506" class="bg-white/10 border border-white/30 px-5 py-3 rounded-xl font-semibold"><span class="lang-fr">Appeler</span><span class="lang-en">Call</span> +224 629 11 05 06</a>
+    </div>
+  </div>
+</section>
+<section class="bg-white border-b">
+  <div class="max-w-6xl mx-auto px-4 py-4 grid sm:grid-cols-3 gap-3 text-sm">
+    <div><span class="text-gold font-semibold">Laurel, MD</span> · +1 240 280 6137</div>
+    <div><span class="text-gold font-semibold">Coyah</span> · Orange Money / GNF · +224 611 351 302</div>
+    <div><span class="text-gold font-semibold">Freetown</span> · SLE · Al-Falah studio</div>
+  </div>
+</section>
+<section id="menu" class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-extrabold"><span class="lang-fr">La table</span><span class="lang-en">The table</span></h2>
+  <p class="text-slate-600 mt-2"><span class="lang-fr">Prix du jour sur WhatsApp. Photos d’ambiance — à remplacer par vos plats.</span><span class="lang-en">Ask today’ s prices on WhatsApp. Ambiance photos — swap in your own plates.</span></p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
+    <button onclick="openM('garba')" class="text-left bg-white rounded-2xl shadow overflow-hidden hover:-translate-y-0.5 transition">
+      <img src="assets/garba.jpg" alt="Garba" class="h-44 w-full object-cover">
+      <div class="p-4"><h3 class="font-bold">Garba & attiéké</h3><p class="text-sm text-slate-600 mt-1"><span class="lang-fr">Classique ivoirien, piment maison.</span><span class="lang-en">Ivorian classic, house chili.</span></p></div>
+    </button>
+    <button onclick="openM('grill')" class="text-left bg-white rounded-2xl shadow overflow-hidden hover:-translate-y-0.5 transition">
+      <img src="assets/grill.jpg" alt="Grillades" class="h-44 w-full object-cover">
+      <div class="p-4"><h3 class="font-bold"><span class="lang-fr">Grillades & brochettes</span><span class="lang-en">Grills & skewers</span></h3><p class="text-sm text-slate-600 mt-1"><span class="lang-fr">Poulet, poisson, viande braisée.</span><span class="lang-en">Chicken, fish, braised meat.</span></p></div>
+    </button>
+    <button onclick="openM('traiteur')" class="text-left bg-white rounded-2xl shadow overflow-hidden hover:-translate-y-0.5 transition">
+      <img src="assets/buffet.jpg" alt="Buffet" class="h-44 w-full object-cover">
+      <div class="p-4"><h3 class="font-bold"><span class="lang-fr">Traiteur & brunch</span><span class="lang-en">Catering & brunch</span></h3><p class="text-sm text-slate-600 mt-1"><span class="lang-fr">Mariage, baptême, entreprise.</span><span class="lang-en">Weddings, baptisms, offices.</span></p></div>
+    </button>
+  </div>
+</section>
+<section id="galerie" class="bg-ink text-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold"><span class="lang-fr">Ambiance</span><span class="lang-en">Gallery</span></h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
+      <img src="assets/g1.jpg" alt="" class="h-40 w-full object-cover rounded-xl">
+      <img src="assets/g2.jpg" alt="" class="h-40 w-full object-cover rounded-xl">
+      <img src="assets/g3.jpg" alt="" class="h-40 w-full object-cover rounded-xl">
+      <img src="assets/g4.jpg" alt="" class="h-40 w-full object-cover rounded-xl">
+    </div>
+  </div>
+</section>
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-extrabold"><span class="lang-fr">Ce qu’un site change</span><span class="lang-en">What a site changes</span></h2>
+  <div class="grid sm:grid-cols-3 gap-4 mt-6">
+    <div class="bg-white rounded-2xl p-5 shadow"><p class="text-3xl font-extrabold text-teal">3×</p><p class="text-sm mt-1"><span class="lang-fr">plus de demandes WhatsApp après une page claire (cas Acile Coffee).</span><span class="lang-en">more WhatsApp inquiries after a clear page (Acile Coffee case).</span></p></div>
+    <div class="bg-white rounded-2xl p-5 shadow"><p class="text-3xl font-extrabold text-teal">1</p><p class="text-sm mt-1"><span class="lang-fr">lien à envoyer pour mariages et devis traiteur.</span><span class="lang-en">link to send for weddings and catering quotes.</span></p></div>
+    <div class="bg-white rounded-2xl p-5 shadow"><p class="text-3xl font-extrabold text-teal">FR/EN</p><p class="text-sm mt-1"><span class="lang-fr">clients locaux et diaspora, même page.</span><span class="lang-en">local guests and diaspora, one page.</span></p></div>
+  </div>
+</section>
+<section id="contact" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+    <div>
+      <h2 class="text-3xl font-extrabold"><span class="lang-fr">Écrire à la cheffe</span><span class="lang-en">Message the chef</span></h2>
+      <p class="mt-2 text-slate-600">Taouyah Transit, Conakry · +224 629 11 05 06 · honeykaba09@gmail.com</p>
+      <form class="mt-6 space-y-3" onsubmit="event.preventDefault(); sendLead();">
+        <input id="nm" required placeholder="Nom" class="w-full border rounded-xl px-4 py-3">
+        <input id="ev" placeholder="Événement / Event" class="w-full border rounded-xl px-4 py-3">
+        <textarea id="ms" required rows="3" placeholder="Message" class="w-full border rounded-xl px-4 py-3"></textarea>
+        <button class="bg-teal text-white font-semibold rounded-xl px-5 py-3">WhatsApp</button>
+      </form>
+    </div>
+    <div class="rounded-2xl bg-ink text-white p-6">
+      <p class="text-gold text-sm uppercase tracking-wide">Al-Falah Marketing</p>
+      <p class="mt-3 text-sm text-slate-300">Maquette de revue uniquement. Photos d’ambiance Unsplash, à remplacer par vos clichés. 8468 Winding Trail, Laurel, MD 20724 · info@al-falahmarketing.com</p>
+    </div>
+  </div>
+</section>
+<footer class="bg-ink text-slate-300 text-sm py-8 px-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between gap-3">
+    <p>O’Garba by cheffe Assana · maquette non publiée</p>
+    <p>Site proposé par <a class="text-white underline" href="https://al-falahmarketing.com">Al-Falah Marketing</a></p>
+  </div>
+</footer>
+<div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white border-t flex">
+  <a href="tel:+224629110506" class="flex-1 text-center py-3 font-semibold">Call</a>
+  <a href="https://wa.me/224629110506" class="flex-1 text-center py-3 font-semibold bg-teal text-white">WhatsApp</a>
+  <a href="#menu" class="flex-1 text-center py-3 font-semibold">Menu</a>
+</div>
+<div id="modal" class="hidden fixed inset-0 z-50 bg-black/60 items-end sm:items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6">
+    <h3 id="mt" class="text-xl font-bold"></h3>
+    <p id="mb" class="text-slate-600 mt-2"></p>
+    <a href="https://wa.me/224629110506" class="mt-4 inline-block bg-teal text-white rounded-xl px-4 py-2">WhatsApp</a>
+    <button onclick="closeM()" class="ml-2 text-sm">Fermer</button>
+  </div>
+</div>
+<script>
+const copy = { garba:['Garba & attiéké','Thon, attiéké, piment, alloco. Prix du jour.'], grill:['Grillades','Brochettes et braisé pour table ou plateau.'], traiteur:['Traiteur','Devis mariage, baptême, brunch entreprise.'] };
+function openM(k){ document.getElementById('mt').textContent=copy[k][0]; document.getElementById('mb').textContent=copy[k][1]; document.getElementById('modal').classList.remove('hidden'); document.getElementById('modal').classList.add('flex'); }
+function closeM(){ document.getElementById('modal').classList.add('hidden'); document.getElementById('modal').classList.remove('flex'); }
+document.getElementById('langBtn').onclick = () => { document.body.classList.toggle('en'); document.getElementById('langBtn').textContent = document.body.classList.contains('en') ? 'FR' : 'EN'; };
+function sendLead(){ const t = encodeURIComponent('Bonjour O’Garba, je suis '+document.getElementById('nm').value+'. '+document.getElementById('ev').value+' — '+document.getElementById('ms').value); location.href='https://wa.me/224629110506?text='+t; }
+</script>
+</body>
+</html>
